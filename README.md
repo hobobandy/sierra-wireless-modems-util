@@ -15,7 +15,7 @@ Interact with Sierra Wireless modems, specifically AirPrime EM74xx/MC74xx models
 3. Send the following commands - adjust the index as required, wait for an OK after each command: 
 
     * `minicom` can also be used to send the commands.
-
+    
     ```bash
     sudo mmcli -m 0 --command="ATI"
     sudo mmcli -m 0 --command="A710"
@@ -35,12 +35,12 @@ Interact with Sierra Wireless modems, specifically AirPrime EM74xx/MC74xx models
 * `AT!GPSAUTOSTART=1,1,255,100,1` - Configure GPS auto-start
   * Enable at boot
   * Standalone fix (no MS assistance, use GPS only)
-  * Max time to wait for fix (255 secs)
-  * Accuracy of fix (within 100 meters)
-  * Time between fixes (1 sec)
+  * Max time to wait for fix (`255` secs)
+  * Accuracy of fix (within `100` meters)
+  * Time between fixes (`1` sec)
 * `AT!GPSNMEACONFIG=1,1` - Configure NMEA sentences
   * Enable NMEA data output
-  * Output rate of 1 sec
+  * Output rate of `1` sec
 * `AT+WANT=1` - Enable antenna power (3.3V) for active GPS antennae
 * `AT!CUSTOM="GPSSEL",0` - Ensure dedicated GPS antenna port is used (default)
 * `AT!CUSTOM="GPSLPM",0` - GPS remains enabled when modem enters low power mode (e.g, no SIM)
@@ -52,9 +52,9 @@ Reference: [Software Integration and Development Guide for Linux](https://source
 
 ### Flash Tool Download
 
-1. Download the Sierra Wireless's Mobile Broadband Package SDK Lite for Linux:
+1. Download the Sierra Wireless's Mobile Broadband Package SDK Lite for Linux:  
    * [MBPL_SDK_Rxx_ENGx-lite.bin.tar](https://source.sierrawireless.com/resources/airprime/software/mbpl/mbpl-software-latest/)
-2. Extract the `lite-fw-download` tool specifically - adapt for your platform:
+2. Extract the `lite-fw-download` tool specifically - adapt for your platform:  
    `tar --extract --strip-components 3 --file MBPL_SDK_R42_ENG4-lite.bin.tar.gz SampleApps/fw-download-tool/bin/fw-download-toolhostx86_64`
 
 ### Firmware Flashing
