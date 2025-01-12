@@ -8,6 +8,11 @@ Interact with Sierra Wireless modems, specifically AirPrime EM74xx/MC74xx models
 
 * [MC7455](https://source.sierrawireless.com/resources/airprime/minicard/74xx/airprime_mc7455_product_technical_specification/)
 
+## MC7455 USB Interfaces
+
+* `/dev/ttyUSB2` - NMEA (send `$GPS_START`/`$GPS_STOP` to toggle output)
+* `/dev/ttyUSB3` - AT (see commands in references)
+
 ## Auto-start GPS without a SIM card
 
 1. Stop and disable ModemManager to prevent conflicts:  
@@ -52,9 +57,9 @@ Interact with Sierra Wireless modems, specifically AirPrime EM74xx/MC74xx models
 
 1. Add the modem GPS to gpsd:  
    `sudo gpsdctl add /dev/ttyUSB2`
-2. Start the modem GPS output:
+2. Start the modem GPS output:  
    `echo -e "\$GPS_START" | sudo tee /dev/ttyUSB2`
-3. If needed, to stop the GPS output:
+3. If needed, to stop the GPS output:  
    `echo -e "\$GPS_STOP" | sudo tee /dev/ttyUSB2`
 
 ## Firmware Upgrade
