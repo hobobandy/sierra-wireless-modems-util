@@ -46,6 +46,17 @@ Interact with Sierra Wireless modems, specifically AirPrime EM74xx/MC74xx models
 * `AT!CUSTOM="GPSLPM",0` - GPS remains enabled when modem enters low power mode (e.g, no SIM)
 * `AT!RESET` - Reset modem to apply new configuration
 
+## GPSD Setup
+
+* This should be done after the auto-start configuration is applied.
+
+1. Add the modem GPS to gpsd:  
+   `sudo gpsdctl add /dev/ttyUSB2`
+2. Start the modem GPS output:
+   `echo -e "\$GPS_START" | sudo tee /dev/ttyUSB2`
+3. If needed, to stop the GPS output:
+   `echo -e "\$GPS_STOP" | sudo tee /dev/ttyUSB2`
+
 ## Firmware Upgrade
 
 Reference: [Software Integration and Development Guide for Linux](https://source.sierrawireless.com/resources/airprime/software/mbpl/mbpl-software-latest/)
