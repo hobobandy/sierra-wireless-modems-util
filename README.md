@@ -2,6 +2,8 @@
 
 Interact with Sierra Wireless modems, specifically AirPrime EM74xx/MC74xx models, using AT commands.
 
+*Under development, until then, here's additional instructions.*
+
 ## Modems Tested
 
 * [MC7455](https://source.sierrawireless.com/resources/airprime/minicard/74xx/airprime_mc7455_product_technical_specification/)
