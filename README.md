@@ -19,8 +19,6 @@ Interact with Sierra Wireless modems, specifically AirPrime EM74xx/MC74xx models
     * `minicom` can also be used to send the commands.
     
     ```bash
-    sudo mmcli -m 0 --command="ATI"
-    sudo mmcli -m 0 --command="A710"
     sudo mmcli -m 0 --command='AT!ENTERCND="A710"'
     sudo mmcli -m 0 --command='AT!GPSAUTOSTART=1,1,255,100,1'
     sudo mmcli -m 0 --command='AT!GPSNMEACONFIG=1,1'
