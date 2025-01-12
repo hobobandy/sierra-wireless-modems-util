@@ -104,4 +104,4 @@ Reference: [Software Integration and Development Guide for Linux](https://source
 
 ## Credit
 
-* Thanks to [daniele wood's sierra-wireless-models project](https://github.com/danielewood/sierra-wireless-modems/) for references and a great start point.
+* Thanks to [Daniel Wood's sierra-wireless-modems project](https://github.com/danielewood/sierra-wireless-modems/) for references and a great start point.
